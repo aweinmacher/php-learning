@@ -1,8 +1,8 @@
 <?php
 
-$query = require 'core/bootstrap.php';
+require 'vendor/autoload.php';
 
-// die(var_dump($app));
+require 'core/bootstrap.php';
 
 require Router::load('routes.php')
         ->direct(Request::uri(), Request::method());
