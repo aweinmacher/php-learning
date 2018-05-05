@@ -3,5 +3,8 @@
 require 'vendor/autoload.php'; // composer
 require 'core/bootstrap.php';  // config and database
 
-Router::load('routes.php')
+use App\Core\Router;
+use App\Core\Request;
+
+Router::load('app/routes.php')
         ->direct(Request::uri(), Request::method());

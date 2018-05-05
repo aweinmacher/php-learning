@@ -2,6 +2,8 @@
 
 // Dependency Injection Container (DI Container)
 
+namespace App\Core;
+
 class App {
     protected static $registry = [];
 
