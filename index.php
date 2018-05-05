@@ -1,8 +1,7 @@
 <?php
 
-require 'vendor/autoload.php';
+require 'vendor/autoload.php'; // composer
+require 'core/bootstrap.php';  // config and database
 
-require 'core/bootstrap.php';
-
-require Router::load('routes.php')
+Router::load('routes.php')
         ->direct(Request::uri(), Request::method());
